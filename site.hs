@@ -51,7 +51,7 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" postCtx
                 >>= relativizeUrls
 
-    match (fromList ["about.html", "contact.html"]) $ do
+    match (fromList ["about.html", "contact.html", "terms.html", "privacy.html"]) $ do
         route idRoute
         compile $ do
             getResourceBody
