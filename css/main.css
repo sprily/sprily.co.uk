@@ -1,0 +1,10 @@
+#nav_logo_link {
+  background-image: url("../images/logo-small.png");
+  background-repeat: no-repeat;
+  background-color: #54dc00;
+  background-position: right bottom;
+  width: 120px;
+  height: 60px;
+  text-indent: -5000em;
+  display: block;
+}
