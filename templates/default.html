@@ -37,9 +37,9 @@
       ================================================== -->
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li $if(home)$ class="active" $endif$><a href="/">Home</a></li>
+          <li $if(about)$ class="active" $endif$><a href="about.html">About</a></li>
+          <li $if(contact)$ class="active" $endif$><a href="contact.html">Contact</a></li>
         </ul>
         <h1 id="nav_logo">
           <a id="nav_logo_link" href="/">Sprily</a>
