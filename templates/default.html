@@ -9,6 +9,7 @@
 
     <link href="/css/main.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
 
     <script type="text/javascript">
         var _gaq = _gaq || [];
@@ -25,40 +26,191 @@
   </head>
 
   <body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+    
+    <header class="masthead">
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-6">
+            <h1><a href="#" title="Bootstrap Template">Happy Scroll</a>
+            <p class="lead">{A Bootstrap Template}</p></h1>
+        </div>
+        <div class="col-sm-6">
+            <div class="pull-right  hidden-xs">    
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><h3><i class="glyphicon glyphicon-cog"></i></h3></a>
+            <ul class="dropdown-menu">
+                <li><a href="#"><i class="glyphicon glyphicon-chevron-right"></i> Link</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-user"></i> Link</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Link</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Link</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+    </header>
+    
+    
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-custom navbar-inverse navbar-static-top" id="nav">
+        <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav nav-justified">
+            <li $if(home)$ class="active" $endif$><a href="#">Home</a></li>
+            <!--<li $if(about)$ class="active" $endif$><a href="about.html">About</a></li>-->
+            <li $if(contact)$ class="active" $endif$><a href="#section4">Contact</a></li>
+            <!--<li><a href="#">Home</a></li>
+            <li><a href="#section2">Product</a></li>
+            <li><a href="#section3">News</a></li>
+            <li class="active"><a href="#section1"><strong>Big Brand</strong></a></li>
+            <li><a href="#section4">About</a></li>
+            <li><a href="#section5">Contact</a></li>-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+    </div><!--/.navbar -->
+    
+    <!-- Begin page content -->
+    <div class="divider" id="section1"></div>
+    
+    <div class="container">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="page-header text-center">
+        <h1>Sticky Footer with Fly-in Navbar</h1>
+        </div>
+        
+        <p class="lead text-center">
+        Twitter Bootstrap is a front-end toolkit to rapidly build web applications.
+        </p>
+        $body$
+    </div>
+    </div>
+        
+    <div class="divider" id="section2"></div>
+    
+    <section class="bg-1">
+    <div class="col-sm-6 col-sm-offset-3 text-center"><h2 style="padding:20px;background-color:rgba(5,5,5,.8)">Try and Tweak Different Layouts</h2></div>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <div class="container" id="section3">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+        <h1>Mobile-first + Responsive</h1>
+        
+        $body$
+        
+        <hr>
+        
+        <img src="/images/bg_smartphones.jpg" class="img-responsive">
+        
+        <hr>
+            </div><!--/col-->
+    </div><!--/container-->
 
-    <div class="container-narrow">
+    <div class="divider"></div>
+    
+    <div class="divider" id="section4"></div>
 
-      <!-- NAVBAR
-      ================================================== -->
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li $if(home)$ class="active" $endif$><a href="/">Home</a></li>
-          <!--<li $if(about)$ class="active" $endif$><a href="about.html">About</a></li>-->
-          <li $if(contact)$ class="active" $endif$><a href="contact.html">Contact</a></li>
+    <div class="row">
+
+    <h1 class="text-center">Where In The World?</h1>
+
+    <div id="map-canvas"></div>
+    
+    <hr>
+    
+    <div class="col-sm-8">
+        
+        <div class="row form-group">
+            <div class="col-xs-3">
+            <input class="form-control" id="firstName" name="firstName" placeholder="First Name" required="" type="text">
+            </div>
+            <div class="col-xs-3">
+            <input class="form-control" id="middleName" name="firstName" placeholder="Middle Name" required="" type="text">
+            </div>
+            <div class="col-xs-4">
+            <input class="form-control" id="lastName" name="lastName" placeholder="Last Name" required="" type="text">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-xs-5">
+            <input class="form-control" name="email" placeholder="Email" required="" type="email">
+            </div>
+            <div class="col-xs-5">
+            <input class="form-control" name="phone" placeholder="Phone" required="" type="email">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-xs-10">
+            <input class="form-control" placeholder="Website URL" required="" type="homepage">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-xs-10">
+                <button class="btn btn-default pull-right">Contact Us</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-sm-3 pull-right">
+
+        <address>
+            <strong>Iatek, LLC.</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            Newport, RI 94107<br>
+            P: (123) 456-7890
+        </address>
+        
+        <address>
+            <strong>Email Us</strong><br>
+            <a href="mailto:#">first.last@example.com</a>
+        </address>          
+    </div>
+    
+    </div><!--/row-->
+
+    <div class="container">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+        <h2>Beautiful Bootstrap Templates</h2>
+        
+        <hr>
+        <h4>
+            We love templates. We love Bootstrap.
+        </h4>
+        <p>Get more free templates like this at the <a href="http://bootply.com">Bootstrap Playground</a>, Bootply.</p>
+        <hr>
+        <ul class="list-inline center-block">
+            <li><a href="http://facebook.com/bootply"><img src="/assets/example/soc_fb.png"></a></li>
+            <li><a href="http://twitter.com/bootply"><img src="/assets/example/soc_tw.png"></a></li>
+            <li><a href="http://google.com/+bootply"><img src="/assets/example/soc_gplus.png"></a></li>
+            <li><a href="http://pinterest.com/in1"><img src="/assets/example/soc_pin.png"></a></li>
         </ul>
-        <h1 id="nav_logo">
-          <a id="nav_logo_link" href="/">Sprily</a>
-        </h1>
-      </div>
+        
+            </div><!--/col-->
+    </div><!--/container-->
+    
+    </div><!--/wrap-->
 
-      <hr/>
-
-      $body$
-
-
-      <hr/>
-
-      <!-- FOOTER -->
-      <footer>
-        <small>
-          <p class="text-right">Sprily IT Ltd.  Company No. 08474582</p>
-          <p class="text-right">&copy; 2013 Sprily IT Ltd.</p>
-        </small>
-      </footer>
-
+    <div id="footer">
+    <div class="container">
+        <p class="text-muted">This Bootstrap Example courtesy <a href="http://www.bootply.com">Bootply.com</a></p>
+    </div>
     </div>
 
+    <ul class="nav pull-right scroll-top">
+    <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+    </ul>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-  </body>
+    <script src="/js/theme.js"></script>
+</body>
 </html>
