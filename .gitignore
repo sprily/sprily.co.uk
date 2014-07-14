@@ -1,12 +1,2 @@
-_site/
-_cache/
 *.swp
 *.swo
-
-site
-site.hi
-site.o
-
-.cabal-sandbox
-cabal.sandbox.config
-dist/
