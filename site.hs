@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
+import qualified Text.HTML.TagSoup as TS
 import           Hakyll
 
 
@@ -50,10 +51,10 @@ main = hakyll $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
+            recentPosts <- loadTop 3 "posts/*"
             let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Home"                `mappend`
+                    listField "recentPosts" postCtx (return recentPosts) `mappend`
+                    constField "title" "Home"                            `mappend`
                     defaultContext
 
             getResourceBody
@@ -68,4 +69,17 @@ main = hakyll $ do
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
+    previewField "preview"       `mappend`
     defaultContext
+
+-- Top N recent posts, ordered by date
+loadTop :: Int -> Pattern -> Compiler [Item String]
+loadTop n s = fmap (take n) (loadAll s >>= recentFirst)
+
+-- Extracts the first <p> ... </p> from the item
+previewField :: String -> Context String
+previewField key = field key $ return . prefix
+        where prefix = TS.renderTags .
+                       takeWhile (TS.~/= TS.TagClose ("p" :: String)) .
+                       dropWhile (TS.~/= TS.TagOpen ("p" :: String) []) .
+                       TS.parseTags . itemBody
