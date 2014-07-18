@@ -16,9 +16,13 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
-    match "css/**" $ do
+    match ("css/**" .&&. (complement "css/vendor/fonts/**")) $ do
         route   idRoute
         compile compressCssCompiler
+
+    match "css/vendor/fonts/**" $ do
+        route   idRoute
+        compile copyFileCompiler
 
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
