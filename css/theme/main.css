@@ -6,3 +6,36 @@
 .navbar-default .navbar-nav p {
     margin: 0;
 }
+
+.page-header {
+    border-style: none;
+}
+
+#services {
+    background: #fed;
+}
+
+#datahopper {
+    background: #def;
+}
+
+#about {
+    background: #fed;
+}
+
+#clients {
+    background: #def;
+}
+
+#blog {
+    background: #fed;
+}
+
+#contact {
+    background: #def;
+}
+
+footer {
+    background: black;
+    color: white;
+}
