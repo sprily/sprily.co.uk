@@ -1,6 +1,7 @@
 .navbar-default {
-    background: #def;
+    background: white;
     border-style: none;
+    margin-top: 20px;
 }
 
 .navbar-default .navbar-nav p {
@@ -11,20 +12,26 @@
     border-style: none;
 }
 
+.thumbnail {
+    text-align: center;
+    border-style: none;
+}
+
 /** Main section **/
 .section {
+    background: #def;
     padding-top: 0px;
     padding-bottom: 10px;
 }
 @media (min-width: 768px) {
     .section {
-        padding-top: 150px;
-        padding-bottom: 150px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 
 #services {
-    background: #fed;
+    background: #fff;
 }
 
 #datahopper {
@@ -32,7 +39,7 @@
 }
 
 #about {
-    background: #fed;
+    background: white;
 }
 
 #clients {
@@ -40,14 +47,16 @@
 }
 
 #blog {
-    background: #fed;
+    background: white;
 }
 
 #contact {
     background: #def;
 }
 
-footer {
+#main-footer {
     background: black;
     color: white;
 }
+
+
