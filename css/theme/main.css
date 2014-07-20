@@ -1,0 +1,8 @@
+.navbar-default {
+    background: #FFF;
+    border-style: none;
+}
+
+.navbar-default .navbar-nav p {
+    margin: 0;
+}
