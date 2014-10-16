@@ -24,6 +24,17 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "less/**" $ do
+        compile getResourceBody
+
+    d <- makePatternDependency "less/**"
+    rulesExtraDependencies [d] $ create ["css/main.css"] $ do
+        route idRoute
+        compile $ loadBody "less/main.less"
+            >>= makeItem
+            >>= withItemBody 
+              (unixFilter "lessc" ["-", "--include-path=less", "--compress","-O2"])
+
     match (fromList ["about.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
