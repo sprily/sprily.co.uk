@@ -49,13 +49,14 @@
 }
 
 .navbar .nav > li > a {
-  margin-top: ((@navbarHeight - 50) / 2);
-  color: white;
+  @media (min-width: @screen-sm-min) {
+    margin-top: ((@navbarHeight - 50) / 2);
+  }
   font-size: larger;
 }
 
 .navbar .navbar-brand.sprily-logo {
-  @media (min-width: @screen-md-min) {
+  @media (min-width: @screen-sm-min) {
     margin-left: -@navbarHeight / 5;
   }
 }
