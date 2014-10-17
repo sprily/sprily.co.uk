@@ -1,0 +1,75 @@
+@navbarHeight: 150px;
+
+.navbar .filler {
+  background-color: @blue;
+  height: @navbarHeight;
+  width: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.navbar .filler.left {
+  left: 0px;
+  top: 0px;
+  background-image: url("/images/theme/sprily-logo-horizontal-line-inverse.png");
+  background-size: auto 100%;
+}
+
+.navbar .filler.right {
+  right: 0px;
+  top: 0px;
+  background-image: url("/images/theme/nodes-horizontal-line-inverse.png");
+  background-size: auto @navbarHeight/4;
+  background-repeat: repeat-x;
+  background-position: right bottom;
+}
+
+.navbar.navbar-default {
+  z-index: 0;
+  border-style: solid;
+  border-color: @pink;
+  border-width: 0px 0px 3px 0px;
+}
+
+.navbar.navbar-default .container {
+  background-color: @blue;
+  background-image: url("/images/theme/nodes-left-inverse.png");
+  background-size: auto @navbarHeight/4;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.navbar .bullet {
+  background: url("/images/theme/bullet.png");
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar .nav > li > a {
+  @media (min-width: @screen-sm-min) {
+    margin-top: ((@navbarHeight - 50) / 2);
+  }
+  font-size: larger;
+}
+
+.navbar .navbar-brand.sprily-logo {
+  @media (min-width: @screen-sm-min) {
+    margin-left: -@navbarHeight / 5;
+  }
+}
+
+.navbar {
+  font-family: JosefinSans;
+}
+
+.navbar .sprily-logo {
+  display: block;
+  text-indent: -9999px;
+  width: @navbarHeight;
+  height: @navbarHeight;
+  background: url("/images/theme/sprily-logo-inverse.png");
+  background-size: @navbarHeight @navbarHeight;
+}

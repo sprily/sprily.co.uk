@@ -1,0 +1,23 @@
+@pink: #FF5792;
+
+@blue: #50CDBB;
+@lightBlue: lighten(@blue, 10%);
+@darkBlue: darken(@blue, 50%);
+
+@transparent: fade(white, 0%);
+
+// bootstrap overrides
+
+// common bootstrap overrides
+@jumbotron-bg: fade(@blue, 65%);
+@jumbotron-color: white;
+
+// navbar related bootstrap overrides
+@navbar-default-toggle-hover-bg: @lightBlue;
+@navbar-default-toggle-icon-bar-bg: @pink;
+@navbar-default-toggle-border-color: @blue;
+@navbar-default-link-color: white;
+@navbar-default-link-hover-color: @pink;
+@navbar-default-link-hover-bg: @transparent;
+@navbar-default-link-active-color: @pink;
+@navbar-default-link-active-bg: @transparent;
