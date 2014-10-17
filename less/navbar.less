@@ -55,7 +55,9 @@
 }
 
 .navbar .navbar-brand.sprily-logo {
-  margin-left: -@navbarHeight / 5;
+  @media (min-width: @screen-md-min) {
+    margin-left: -@navbarHeight / 5;
+  }
 }
 
 .navbar {
