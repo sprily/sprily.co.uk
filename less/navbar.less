@@ -1,6 +1,8 @@
+@navbarHeight: 150px;
+
 .navbar .filler {
   background-color: @blue;
-  height: 300px;
+  height: @navbarHeight;
   width: 50%;
   position: absolute;
   z-index: -1;
@@ -17,7 +19,7 @@
   right: 0px;
   top: 0px;
   background-image: url("/images/theme/nodes-horizontal-line-inverse.png");
-  background-size: auto 75px;
+  background-size: auto 25%;
   background-repeat: repeat-x;
   background-position: right bottom;
 }
@@ -32,7 +34,7 @@
 .navbar.navbar-default .container {
   background-color: @blue;
   background-image: url("/images/theme/nodes-left-inverse.png");
-  background-size: auto 75px;
+  background-size: auto 25%;
   background-repeat: no-repeat;
   background-position: right bottom;
 }
@@ -47,13 +49,13 @@
 }
 
 .navbar .nav > li > a {
-  margin-top: 125px;
+  margin-top: ((@navbarHeight - 50) / 2);
   color: white;
   font-size: larger;
 }
 
 .navbar .navbar-brand.sprily-logo {
-  margin-left: -65px;
+  margin-left: -@navbarHeight / 5;
 }
 
 .navbar {
@@ -63,8 +65,8 @@
 .navbar .sprily-logo {
   display: block;
   text-indent: -9999px;
-  width: 300px;
-  height: 300px;
+  width: @navbarHeight;
+  height: @navbarHeight;
   background: url("/images/theme/sprily-logo-inverse.png");
-  background-size: 300px 300px;
+  background-size: @navbarHeight @navbarHeight;
 }
