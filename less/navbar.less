@@ -1,11 +1,37 @@
-.navbar.navbar-default {
+.navbar .filler {
   background-color: @blue;
-  background-image: url("/images/theme/sprily-logo-horizontal-line-inverse.svg");
-  background-size: auto 301px;
+  height: 300px;
+  width: 50%;
+  position: absolute;
+  z-index: -1;
 }
 
-.navbar > .container {
+.navbar .filler.left {
+  left: 0px;
+  top: 0px;
+  background-image: url("/images/theme/sprily-logo-horizontal-line-inverse.svg");
+  background-size: auto 100%;
+}
+
+.navbar .filler.right {
+  right: 0px;
+  top: 0px;
+  background-image: url("/images/theme/nodes-horizontal-line-inverse.svg");
+  background-size: auto 75px;
+  background-repeat: repeat-x;
+  background-position: right bottom;
+}
+
+.navbar.navbar-default {
+  z-index: 0;
+}
+
+.navbar.navbar-default .container {
   background-color: @blue;
+  background-image: url("/images/theme/nodes-left-inverse.svg");
+  background-size: auto 75px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .navbar .bullet {
@@ -22,6 +48,6 @@
   color: white;
 }
 
-.navbar > .container .navbar-brand.sprily-logo {
+.navbar .navbar-brand.sprily-logo {
   margin-left: -60px;
 }
