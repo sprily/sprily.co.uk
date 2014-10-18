@@ -20,3 +20,19 @@
   font-family: JosefinSans;
   font-weight: bold;
 }
+
+.jumbotron {
+  // so that contained .filler can have absolute positioning
+  // relative to the jumbotron.
+  position: relative;
+}
+
+.jumbotron .filler {
+  height: @logoPosition;
+  width: 10%;
+  position: absolute;
+  left: 0px;
+  background-image: url("/images/theme/sprily-logo-horizontal-line-inverse.png");
+  background-size: @logoSize @logoSize;
+  background-position: left center;
+}
