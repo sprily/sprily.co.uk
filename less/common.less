@@ -1,19 +1,22 @@
 @logoSize: 400px;
+@logoPosition: @logoSize - 100;
 
 .empty-logo {
   display: block;
   width: @logoSize;
-  height: @logoSize;
+  height: @logoPosition;
   background: url("/images/theme/empty-logo-inverse.svg");
   background-size: @logoSize @logoSize;
+  background-position: left center;
 }
 
 .empty-logo > h1 {
   font-size: 32pt;
   position: relative;
-  top: @logoSize/2 - 46;
+  top: @logoPosition/2 - 46;
   left: @logoSize * 0.25;
   margin: 0px;
   text-align: left;
   font-family: JosefinSans;
+  font-weight: bold;
 }
