@@ -1,0 +1,19 @@
+@logoSize: 400px;
+
+.empty-logo {
+  display: block;
+  width: @logoSize;
+  height: @logoSize;
+  background: url("/images/theme/empty-logo-inverse.svg");
+  background-size: @logoSize @logoSize;
+}
+
+.empty-logo > h1 {
+  font-size: 32pt;
+  position: relative;
+  top: @logoSize/2 - 46;
+  left: @logoSize * 0.25;
+  margin: 0px;
+  text-align: left;
+  font-family: JosefinSans;
+}
