@@ -21,6 +21,22 @@
   font-weight: bold;
 }
 
+.parent {
+    display:table;
+    height: @logoPosition;
+}
+
+.child {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.child > p {
+  margin-bottom: 0px;
+  font-family: JosefinSans;
+  font-size: 20pt;
+}
+
 .jumbotron {
   // so that contained .filler can have absolute positioning
   // relative to the jumbotron.
