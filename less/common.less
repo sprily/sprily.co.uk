@@ -1,0 +1,71 @@
+@logoSize: 400px;
+@logoPosition: @logoSize - 100;
+
+.empty-logo {
+  display: block;
+  height: @logoPosition;
+  background: url("/images/theme/empty-logo-inverse.svg");
+  background-size: @logoSize @logoSize;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.empty-logo > h1 {
+  font-size: 32pt;
+  position: relative;
+  top: @logoPosition/2 - 46;
+  left: @logoSize * 0.25;
+  max-width: @logoSize * 0.5;
+  margin: 0px;
+  text-align: left;
+  font-family: JosefinSans;
+  font-weight: bold;
+}
+
+.parent {
+    display:table;
+    height: @logoPosition;
+}
+
+.child {
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+}
+
+.child > p {
+  margin-bottom: 0px;
+  font-family: JosefinSans;
+  font-size: 20pt;
+  text-align: left;
+}
+
+.jumbotron .btn {
+  font-family: JosefinSans;
+  text-align: center;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -100px;
+  width: 200px;
+}
+
+.jumbotron {
+  // so that contained .filler can have absolute positioning
+  // relative to the jumbotron.
+  position: relative;
+}
+
+.jumbotron .filler {
+  height: @logoPosition;
+  width: 10%;
+  position: absolute;
+  left: 0px;
+  background-image: url("/images/theme/sprily-logo-horizontal-line-inverse.png");
+  background-size: @logoSize @logoSize;
+  background-position: left center;
+}
+
+em {
+  color: @pink;
+  font-style: bold;
+}

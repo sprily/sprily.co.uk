@@ -1,12 +1,11 @@
-_site/
-_cache/
 *.swp
 *.swo
 
-site
-site.hi
-site.o
-
-.cabal-sandbox
+# cabal sandbox
 cabal.sandbox.config
+.cabal-sandbox/
 dist/
+
+# hakyll
+_cache/
+_site/
