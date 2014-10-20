@@ -3,7 +3,6 @@
 
 .empty-logo {
   display: block;
-  width: @logoSize;
   height: @logoPosition;
   background: url("/images/theme/empty-logo-inverse.svg");
   background-size: @logoSize @logoSize;
@@ -15,6 +14,7 @@
   position: relative;
   top: @logoPosition/2 - 46;
   left: @logoSize * 0.25;
+  max-width: @logoSize * 0.5;
   margin: 0px;
   text-align: left;
   font-family: JosefinSans;
